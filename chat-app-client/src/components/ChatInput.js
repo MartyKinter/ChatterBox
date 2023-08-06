@@ -1,22 +1,24 @@
 import React, {useState} from "react";
 
 function ChatInput({handleSendMsg}){
-    const [msg, setMsg] = useState("");
+    const [text, setText] = useState("");
+
 
     const sendChat = (evt) => {
         evt.preventDefault();
-        if(msg.length>0){
-            handleSendMsg(msg);
-            setMsg('');
+        if(text.length>0){
+            handleSendMsg(text);
+            setText('');
         }
     }
 
     return (
-    <form className="flex gap-2 mx-2" onSubmit={(evt)=>sendChat(evt)}>
+    <form className="flex gap-2 m-2" onSubmit={(evt)=>sendChat(evt)}>
     <input className="bg-white flex-grow border rounded-sm p-2"
-           type="text" placeholder="Type your message here" 
-           value={msg}
-           onChange={(evt)=>setMsg(evt.target.value)}/>
+           type="text" 
+           placeholder="Type your message here" 
+           value={text}
+           onChange={(evt)=>setText(evt.target.value)}/>
 
     <button className="bg-blue-500 p-2 text-white rounded-sm" type="submit">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
