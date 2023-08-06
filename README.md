@@ -10,8 +10,8 @@ Contacts List: Display a list of contacts or users that the current user can cha
 
 ## Technologies Used
 
-React
-NodeJS
-Tailwind CSS
-Jsonwebtoken
-Websockets with Socket.io
+- React
+- Node.js
+- Tailwind CSS
+- Jsonwebtoken
+- Websockets with Socket.io
