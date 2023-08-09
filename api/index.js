@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({ 
-    origin: process.env.CLIENT_URL,
+    origin: process.env.REACT_APP_CLIENT_URL,
     credentials: true
   }));
 
@@ -25,7 +25,7 @@ const server = app.listen(3030, () => {console.log("Server started on port 3030"
 
 const io = socket(server, { 
   cors:{
-    origin: process.env.CLIENT_URL,
+    origin: process.env.REACT_APP_CLIENT_URL,
     credentials: true
   }
 });
