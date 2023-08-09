@@ -14,21 +14,3 @@ CREATE TABLE IF NOT EXISTS messages (
     sent_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-
--- CREATE TABLE messages (
---     id SERIAL PRIMARY KEY,
---     text VARCHAR(255) NOT NULL,
---     users TEXT[] NOT NULL,
---     sender_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
---     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
---     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
--- );
-
--- CREATE TABLE messages (
---     id SERIAL PRIMARY KEY,
---     from_username text NOT NULL REFERENCES users,
---     to_username text NOT NULL REFERENCES users,
---     body text NOT NULL,
---     sent_at timestamp with time zone NOT NULL,
---     read_at timestamp with time zone
--- );
