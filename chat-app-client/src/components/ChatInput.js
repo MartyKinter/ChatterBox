@@ -13,7 +13,7 @@ function ChatInput({handleSendMsg}){
     }
 
     return (
-    <form className="flex gap-2 m-2" onSubmit={(evt)=>sendChat(evt)}>
+    <form className="flex gap-2 m-2 justify-center" onSubmit={(evt)=>sendChat(evt)}>
     <input className="bg-white flex-grow border rounded-sm p-2"
            type="text" 
            placeholder="Type your message here" 

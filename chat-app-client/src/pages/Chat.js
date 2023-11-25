@@ -67,11 +67,13 @@ function Chat(){
     };
 
     return(
-        <div className="flex h-screen">
-            <div className="bg-white w-1/3">
+        <div className="flex sm:h-screen flex-col sm:flex-row max-h-96">
+            <div className="bg-white sm:w-1/3">
+              <div className="flex">
               <Contacts contacts={contacts} currentUser={currentUser} changeChat={handleChatChange}/>
+              </div>
             </div>
-            <div className="flex flex-col bg-blue-50 w-2/3 p-2">
+            <div className="flex flex-col bg-blue-50 sm:w-2/3 p-2 h-96 sm:h-screen">
                   {isLoaded && currentChat === undefined ? 
                   <Welcome currentUser={currentUser}/> :
                   <ChatContainer currentChat={currentChat} currentUser={currentUser} socket={socket}/>}
